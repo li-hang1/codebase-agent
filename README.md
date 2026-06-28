@@ -34,24 +34,16 @@ codebase_agent/
 ollama list
 ```
 
-进入工程目录：
-
-```bash
-cd /root/LH/codebase_agent
-conda activate zjw
-python main.py --repo /root/LH/AdaInt
-```
-
 也可以单次提问：
 
 ```bash
-conda run -n zjw python main.py --repo /root/LH/AdaInt --once "这个项目的入口文件是什么？"
+conda run -n zjw python main.py --repo /root/codebase --once "这个项目的入口文件是什么？"
 ```
 
-如果要分析 `/root/LH` 下所有内容：
+如果要分析 `/root/codebase` 下所有内容：
 
 ```bash
-python main.py --repo /root/LH
+python main.py --repo /root/codebase
 ```
 
 ## 可用工具
@@ -64,15 +56,6 @@ python main.py --repo /root/LH
 - `delete_path`：删除仓库内路径，但实际会移动到 `.codebase_agent_trash`，避免永久删除。
 
 所有路径都会限制在 `--repo` 指定的根目录内，不能访问仓库外文件。
-
-## 常用环境变量
-
-```bash
-export CODEBASE_AGENT_MODEL=qwen3:latest
-export OLLAMA_BASE_URL=http://127.0.0.1:11434
-export CODEBASE_AGENT_NUM_CTX=8192
-export CODEBASE_AGENT_TEMPERATURE=0
-```
 
 ## 示例问题
 
