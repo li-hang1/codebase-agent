@@ -37,7 +37,7 @@ ollama list
 也可以单次提问：
 
 ```bash
-conda run -n zjw python main.py --repo /root/codebase --once "这个项目的入口文件是什么？"
+python main.py --repo /root/codebase --once "这个项目的入口文件是什么？"
 ```
 
 如果要分析 `/root/codebase` 下所有内容：
